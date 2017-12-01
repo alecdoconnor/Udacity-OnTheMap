@@ -7,17 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7045F7121FD0A3DC00B486ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F7111FD0A3DB00B486ED /* LoginViewController.swift */; };
+		7045F7151FD0AA7F00B486ED /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F7141FD0AA7F00B486ED /* Student.swift */; };
+		7045F7181FD0AC6100B486ED /* NetworkingRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F7171FD0AC6100B486ED /* NetworkingRequests.swift */; };
+		7045F71A1FD0AC6A00B486ED /* NetworkingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F7191FD0AC6A00B486ED /* NetworkingConstants.swift */; };
+		7045F71C1FD0AFF100B486ED /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F71B1FD0AFF100B486ED /* NetworkingError.swift */; };
+		7045F71E1FD0B5D600B486ED /* Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F71D1FD0B5D600B486ED /* Students.swift */; };
+		7045F7201FD0B89A00B486ED /* StudentMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F71F1FD0B89A00B486ED /* StudentMapViewController.swift */; };
+		7045F7221FD0B8B200B486ED /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F7211FD0B8B200B486ED /* StudentTableViewController.swift */; };
+		7045F7241FD0BAE200B486ED /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F7231FD0BAE200B486ED /* StudentTableViewCell.swift */; };
+		7045F7261FD0CD3C00B486ED /* SessionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F7251FD0CD3C00B486ED /* SessionContainer.swift */; };
+		7045F72C1FD0EE8300B486ED /* StudentResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F72B1FD0EE8300B486ED /* StudentResults.swift */; };
+		7045F72E1FD0F92B00B486ED /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F72D1FD0F92B00B486ED /* Profile.swift */; };
+		7045F7301FD0FA1D00B486ED /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F72F1FD0FA1D00B486ED /* ProfileManager.swift */; };
+		7045F7351FD10A3A00B486ED /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F7341FD10A3A00B486ED /* AddLocationViewController.swift */; };
+		7045F7371FD1114D00B486ED /* AddLocationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045F7361FD1114D00B486ED /* AddLocationMapViewController.swift */; };
 		70F6389C1FD09EBF00F242AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6389B1FD09EBF00F242AF /* AppDelegate.swift */; };
-		70F6389E1FD09EBF00F242AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6389D1FD09EBF00F242AF /* ViewController.swift */; };
 		70F638A11FD09EBF00F242AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F6389F1FD09EBF00F242AF /* Main.storyboard */; };
 		70F638A31FD09EBF00F242AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F638A21FD09EBF00F242AF /* Assets.xcassets */; };
 		70F638A61FD09EBF00F242AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F638A41FD09EBF00F242AF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7045F7111FD0A3DB00B486ED /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7045F7141FD0AA7F00B486ED /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		7045F7171FD0AC6100B486ED /* NetworkingRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRequests.swift; sourceTree = "<group>"; };
+		7045F7191FD0AC6A00B486ED /* NetworkingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingConstants.swift; sourceTree = "<group>"; };
+		7045F71B1FD0AFF100B486ED /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		7045F71D1FD0B5D600B486ED /* Students.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Students.swift; sourceTree = "<group>"; };
+		7045F71F1FD0B89A00B486ED /* StudentMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMapViewController.swift; sourceTree = "<group>"; };
+		7045F7211FD0B8B200B486ED /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
+		7045F7231FD0BAE200B486ED /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
+		7045F7251FD0CD3C00B486ED /* SessionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionContainer.swift; sourceTree = "<group>"; };
+		7045F72B1FD0EE8300B486ED /* StudentResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentResults.swift; sourceTree = "<group>"; };
+		7045F72D1FD0F92B00B486ED /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		7045F72F1FD0FA1D00B486ED /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		7045F7341FD10A3A00B486ED /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		7045F7361FD1114D00B486ED /* AddLocationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationMapViewController.swift; sourceTree = "<group>"; };
 		70F638981FD09EBF00F242AF /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F6389B1FD09EBF00F242AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70F6389D1FD09EBF00F242AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		70F638A01FD09EBF00F242AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70F638A21FD09EBF00F242AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70F638A51FD09EBF00F242AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +63,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7045F7101FD0A3DB00B486ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7045F7111FD0A3DB00B486ED /* LoginViewController.swift */,
+				7045F71F1FD0B89A00B486ED /* StudentMapViewController.swift */,
+				7045F7211FD0B8B200B486ED /* StudentTableViewController.swift */,
+				7045F7231FD0BAE200B486ED /* StudentTableViewCell.swift */,
+				7045F7341FD10A3A00B486ED /* AddLocationViewController.swift */,
+				7045F7361FD1114D00B486ED /* AddLocationMapViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7045F7131FD0AA5700B486ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7045F7311FD0FCEA00B486ED /* Profile */,
+				7045F7321FD0FCF200B486ED /* Student */,
+				7045F7331FD0FD0000B486ED /* Session */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7045F7161FD0AC5200B486ED /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7045F7191FD0AC6A00B486ED /* NetworkingConstants.swift */,
+				7045F71B1FD0AFF100B486ED /* NetworkingError.swift */,
+				7045F7171FD0AC6100B486ED /* NetworkingRequests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7045F7311FD0FCEA00B486ED /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7045F72F1FD0FA1D00B486ED /* ProfileManager.swift */,
+				7045F72D1FD0F92B00B486ED /* Profile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7045F7321FD0FCF200B486ED /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				7045F72B1FD0EE8300B486ED /* StudentResults.swift */,
+				7045F71D1FD0B5D600B486ED /* Students.swift */,
+				7045F7141FD0AA7F00B486ED /* Student.swift */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		7045F7331FD0FD0000B486ED /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				7045F7251FD0CD3C00B486ED /* SessionContainer.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		70F6388F1FD09EBF00F242AF = {
 			isa = PBXGroup;
 			children = (
@@ -55,7 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				70F6389B1FD09EBF00F242AF /* AppDelegate.swift */,
-				70F6389D1FD09EBF00F242AF /* ViewController.swift */,
+				7045F7161FD0AC5200B486ED /* Networking */,
+				7045F7131FD0AA5700B486ED /* Models */,
+				7045F7101FD0A3DB00B486ED /* Views */,
 				70F6389F1FD09EBF00F242AF /* Main.storyboard */,
 				70F638A21FD09EBF00F242AF /* Assets.xcassets */,
 				70F638A41FD09EBF00F242AF /* LaunchScreen.storyboard */,
@@ -136,8 +226,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70F6389E1FD09EBF00F242AF /* ViewController.swift in Sources */,
+				7045F7121FD0A3DC00B486ED /* LoginViewController.swift in Sources */,
+				7045F7241FD0BAE200B486ED /* StudentTableViewCell.swift in Sources */,
+				7045F71A1FD0AC6A00B486ED /* NetworkingConstants.swift in Sources */,
+				7045F7301FD0FA1D00B486ED /* ProfileManager.swift in Sources */,
+				7045F72E1FD0F92B00B486ED /* Profile.swift in Sources */,
+				7045F71C1FD0AFF100B486ED /* NetworkingError.swift in Sources */,
+				7045F71E1FD0B5D600B486ED /* Students.swift in Sources */,
+				7045F7351FD10A3A00B486ED /* AddLocationViewController.swift in Sources */,
+				7045F7261FD0CD3C00B486ED /* SessionContainer.swift in Sources */,
+				7045F7151FD0AA7F00B486ED /* Student.swift in Sources */,
+				7045F7201FD0B89A00B486ED /* StudentMapViewController.swift in Sources */,
+				7045F72C1FD0EE8300B486ED /* StudentResults.swift in Sources */,
+				7045F7371FD1114D00B486ED /* AddLocationMapViewController.swift in Sources */,
 				70F6389C1FD09EBF00F242AF /* AppDelegate.swift in Sources */,
+				7045F7181FD0AC6100B486ED /* NetworkingRequests.swift in Sources */,
+				7045F7221FD0B8B200B486ED /* StudentTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24LJMF7J23;
 				INFOPLIST_FILE = OnTheMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alecoconnor.OnTheMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24LJMF7J23;
 				INFOPLIST_FILE = OnTheMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alecoconnor.OnTheMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
