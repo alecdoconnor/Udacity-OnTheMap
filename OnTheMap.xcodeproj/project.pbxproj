@@ -67,11 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				7045F7111FD0A3DB00B486ED /* LoginViewController.swift */,
-				7045F71F1FD0B89A00B486ED /* StudentMapViewController.swift */,
-				7045F7211FD0B8B200B486ED /* StudentTableViewController.swift */,
-				7045F7231FD0BAE200B486ED /* StudentTableViewCell.swift */,
-				7045F7341FD10A3A00B486ED /* AddLocationViewController.swift */,
-				7045F7361FD1114D00B486ED /* AddLocationMapViewController.swift */,
+				7045F73A1FD1E9C200B486ED /* MapViewTab */,
+				7045F7381FD1E99F00B486ED /* TableViewTab */,
+				7045F7391FD1E9B400B486ED /* AddLocationModal */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,6 +119,32 @@
 				7045F7251FD0CD3C00B486ED /* SessionContainer.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		7045F7381FD1E99F00B486ED /* TableViewTab */ = {
+			isa = PBXGroup;
+			children = (
+				7045F7211FD0B8B200B486ED /* StudentTableViewController.swift */,
+				7045F7231FD0BAE200B486ED /* StudentTableViewCell.swift */,
+			);
+			path = TableViewTab;
+			sourceTree = "<group>";
+		};
+		7045F7391FD1E9B400B486ED /* AddLocationModal */ = {
+			isa = PBXGroup;
+			children = (
+				7045F7341FD10A3A00B486ED /* AddLocationViewController.swift */,
+				7045F7361FD1114D00B486ED /* AddLocationMapViewController.swift */,
+			);
+			path = AddLocationModal;
+			sourceTree = "<group>";
+		};
+		7045F73A1FD1E9C200B486ED /* MapViewTab */ = {
+			isa = PBXGroup;
+			children = (
+				7045F71F1FD0B89A00B486ED /* StudentMapViewController.swift */,
+			);
+			name = MapViewTab;
 			sourceTree = "<group>";
 		};
 		70F6388F1FD09EBF00F242AF = {
