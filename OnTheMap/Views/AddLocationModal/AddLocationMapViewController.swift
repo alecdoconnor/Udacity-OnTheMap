@@ -14,22 +14,26 @@ class AddLocationMapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var finishButton: UIButton!
+    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
     
     var website: String?
-    var location: String? {
-        didSet {
-            if location != nil {
-                geocodeAddress()
-            }
-        }
-    }
+    var location: String?
     var coordinate: CLLocationCoordinate2D?
     var objectId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         objectId = ProfileManager.shared.objectId
+        setUpActivityIndicator()
         roundCorners(finishButton)
+        if location != nil {
+            geocodeAddress()
+        }
+    }
+    
+    func setUpActivityIndicator() {
+        loadingActivityIndicator.stopAnimating()
+        loadingActivityIndicator.hidesWhenStopped = true
     }
 
     @IBAction func finishButtonPressed(_ sender: Any) {
@@ -53,45 +57,31 @@ class AddLocationMapViewController: UIViewController {
     }
     
     func geocodeAddress() {
+        self.loadingActivityIndicator.startAnimating()
         let geoCoder = CLGeocoder()
         guard let location = location else { return }
         geoCoder.geocodeAddressString(location, completionHandler: { (placemarks, error) -> Void in
-            if let placemark = placemarks?.first, let location = placemark.location {
-                self.coordinate = location.coordinate
-                
-                let mark = MKPlacemark(placemark: placemark)
-                var region = self.mapView.region
-                region.center = location.coordinate
-                region.span.longitudeDelta /= 200
-                region.span.latitudeDelta /= 200
-                self.mapView.setRegion(region, animated: true)
-                self.mapView.addAnnotation(mark)
+            DispatchQueue.main.async {
+                guard error == nil else {
+                        self.loadingActivityIndicator.stopAnimating()
+                        self.presentErrorAlert("There was a problem searching that location")
+                    return
+                }
+                if let placemark = placemarks?.first, let location = placemark.location {
+                    self.coordinate = location.coordinate
+                    
+                    let mark = MKPlacemark(placemark: placemark)
+                    var region = self.mapView.region
+                    region.center = location.coordinate
+                    region.span.longitudeDelta /= 200
+                    region.span.latitudeDelta /= 200
+                    self.mapView.setRegion(region, animated: true)
+                    self.mapView.addAnnotation(mark)
+                    
+                    self.loadingActivityIndicator.stopAnimating()
+                }
             }
         })
     }
-    
-    func roundCorners(_ item: UIView) {
-        item.layer.masksToBounds = true
-        item.layer.cornerRadius = 5.0
-    }
-    
-    func presentErrorAlert(_ message: String = "There was a problem performing that action.") {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

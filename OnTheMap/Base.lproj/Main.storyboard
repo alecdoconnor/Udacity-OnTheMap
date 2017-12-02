@@ -108,6 +108,10 @@
                                     <action selector="finishButtonPressed:" destination="UKd-xj-2pK" eventType="touchUpInside" id="j5X-dn-9mS"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ApP-vC-diI">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -115,14 +119,17 @@
                             <constraint firstItem="cvd-gd-S2r" firstAttribute="bottom" secondItem="qcH-FI-Tjs" secondAttribute="bottom" constant="20" id="Faw-H5-JhS"/>
                             <constraint firstItem="Leu-Qs-Lan" firstAttribute="leading" secondItem="cvd-gd-S2r" secondAttribute="leading" id="GWj-XW-AHE"/>
                             <constraint firstItem="cvd-gd-S2r" firstAttribute="bottom" secondItem="Leu-Qs-Lan" secondAttribute="bottom" id="OGz-1N-X56"/>
+                            <constraint firstItem="ApP-vC-diI" firstAttribute="centerY" secondItem="fSf-66-q9c" secondAttribute="centerY" id="XUH-Ar-OYQ"/>
                             <constraint firstItem="qcH-FI-Tjs" firstAttribute="leading" secondItem="cvd-gd-S2r" secondAttribute="leading" constant="20" id="Z9X-oG-Lf3"/>
                             <constraint firstItem="Leu-Qs-Lan" firstAttribute="top" secondItem="cvd-gd-S2r" secondAttribute="top" id="ebp-FL-LSn"/>
                             <constraint firstItem="cvd-gd-S2r" firstAttribute="trailing" secondItem="qcH-FI-Tjs" secondAttribute="trailing" constant="20" id="gXp-Zc-i9o"/>
+                            <constraint firstItem="ApP-vC-diI" firstAttribute="centerX" secondItem="fSf-66-q9c" secondAttribute="centerX" id="vCi-0z-ROG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cvd-gd-S2r"/>
                     </view>
                     <connections>
                         <outlet property="finishButton" destination="qcH-FI-Tjs" id="P2y-Rw-LO2"/>
+                        <outlet property="loadingActivityIndicator" destination="ApP-vC-diI" id="EOT-cl-b9i"/>
                         <outlet property="mapView" destination="Leu-Qs-Lan" id="kaJ-EJ-gir"/>
                     </connections>
                 </viewController>
@@ -319,6 +326,7 @@
                 <tabBarController storyboardIdentifier="tabBarControllerID" automaticallyAdjustsScrollViewInsets="NO" id="5vc-8f-jIW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bFe-mM-y3l">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

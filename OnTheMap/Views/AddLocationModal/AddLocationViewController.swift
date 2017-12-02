@@ -16,7 +16,7 @@ class AddLocationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fillTextFieldValues()
+        setUpTextFields()
         roundCorners(locationButton)
         setUpNavigationBarButtons()
     }
@@ -33,7 +33,10 @@ class AddLocationViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func fillTextFieldValues() {
+    func setUpTextFields() {
+        for textfield in [locationTextField, websiteTextField] {
+            textfield?.delegate = self
+        }
         locationTextField.text = ProfileManager.shared.locationString ?? ""
         websiteTextField.text = ProfileManager.shared.websiteString ?? ""
     }
@@ -53,22 +56,6 @@ class AddLocationViewController: UIViewController {
     }
     
     
-    func roundCorners(_ item: UIView) {
-        item.layer.masksToBounds = true
-        item.layer.cornerRadius = 5.0
-    }
-    
-    func presentErrorAlert(_ message: String = "There was a problem performing that action.") {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
-    
-    
-    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,5 +63,11 @@ class AddLocationViewController: UIViewController {
             mapViewController.website = websiteTextField?.text ?? ""
             mapViewController.location = locationTextField?.text ?? ""
         }
+    }
+}
+extension AddLocationViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
 }

@@ -182,15 +182,6 @@ class StudentMapViewController: UIViewController {
     
     // MARK: View Functions
     
-    func presentErrorAlert(_ message: String = "There was a problem performing that action.") {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
-    
     func presentActivityIndicator(isVisible: Bool) {
         DispatchQueue.main.async {
             if isVisible {

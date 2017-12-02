@@ -33,11 +33,6 @@ class LoginViewController: UIViewController {
         displayLoadingView(false)
     }
     
-    func roundCorners(_ item: UIView) {
-        item.layer.masksToBounds = true
-        item.layer.cornerRadius = 5.0
-    }
-    
     // MARK: Profile
     
     func verifyUserIsLoggedIn() {
@@ -58,13 +53,13 @@ class LoginViewController: UIViewController {
         }
         displayLoadingView(true)
         enableForm(false)
-        ProfileManager.shared.login(email: email, password: password) { (success) in
+        ProfileManager.shared.login(email: email, password: password) { (success, errorString) in
             self.displayLoadingView(false)
             self.enableForm(true)
             if success {
                 self.presentMainView()
             } else {
-                self.presentErrorAlert("Unable to login, please try again")
+                self.presentErrorAlert(errorString ?? "Unable to login, please try again")
             }
         }
     }
@@ -114,13 +109,4 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func presentErrorAlert(_ message: String = "There was a problem performing that action.") {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
-
 }

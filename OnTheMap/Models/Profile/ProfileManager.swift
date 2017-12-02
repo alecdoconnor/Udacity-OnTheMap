@@ -37,15 +37,15 @@ class ProfileManager {
         }
     }
     
-    func login(email: String, password: String, callback: @escaping SuccessCallback) {
-        NetworkingRequests.shared.postUdacitySession(username: email, password: password) { (key) in
+    func login(email: String, password: String, callback: @escaping SuccessCallbackWithErrorString) {
+        NetworkingRequests.shared.postUdacitySession(username: email, password: password) { (key, errorString) in
             if let key = key {
                 //Logged in, now grab profile
                 self.getProfile(byKey: key, callback: { (success) in
-                    callback(success)
+                    callback(success, nil)
                 })
             } else {
-                callback(false)
+                callback(false, errorString ?? "There was a problem performing that action")
             }
         }
     }

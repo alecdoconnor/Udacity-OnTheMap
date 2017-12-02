@@ -11,7 +11,8 @@ import Foundation
 typealias StudentCallback = (([Student]?, Error?) -> Void)
 typealias ProfileCallback = ((Profile?, Error?)-> Void)
 typealias SuccessCallback = ((Bool) -> Void)
-typealias StringCallback = ((String?)-> Void)
+typealias SuccessCallbackWithErrorString = ((Bool, String?)->Void)
+typealias StringCallbackWithErrorString = ((String?, String?)-> Void)
 
 class NetworkingRequests {
     
@@ -29,7 +30,7 @@ class NetworkingRequests {
     
     // MARK: Session Data
     
-    func postUdacitySession(username: String, password: String, callback: @escaping StringCallback) {
+    func postUdacitySession(username: String, password: String, callback: @escaping StringCallbackWithErrorString) {
         var request = URLRequest(url: URL(string: "https://www.udacity.com/api/session")!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -37,7 +38,7 @@ class NetworkingRequests {
         request.httpBody = "{\"udacity\":{\"username\":\"\(username)\", \"password\": \"\(password)\"}}".data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error != nil {
-                callback(nil)
+                callback(nil, "Request could not be completed; check your network connection")
                 return
             }
             let range = Range(5..<data!.count)
@@ -45,9 +46,9 @@ class NetworkingRequests {
             let sessionContainer = try? JSONDecoder().decode(SessionContainer.self, from: newData ?? Data())
             print(sessionContainer ?? "")
             if (sessionContainer?.account?.registered ?? false) {
-                callback(sessionContainer?.account?.key)
+                callback(sessionContainer?.account?.key, nil)
             } else {
-                callback(nil)
+                callback(nil, "Wrong username and password combination")
             }
         }
         task.resume()

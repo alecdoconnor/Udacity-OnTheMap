@@ -145,17 +145,6 @@ class StudentTableViewController: UITableViewController {
             }
         }
     }
-    
-    // MARK: View Functions
-    
-    func presentErrorAlert(_ message: String = "There was a problem performing that action.") {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
 
     // MARK: - Table view data source
 
@@ -180,6 +169,8 @@ class StudentTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         if let url = students[indexPath.row].mediaURL {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            presentErrorAlert("Invalid URL provided.")
         }
     }
     
